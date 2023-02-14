@@ -38,6 +38,11 @@ const server =http.createServer (function(request,response){
             let product =JSON.stringify(selectedProduct)
             response.write(product);
             
+        }   
+         else
+        {
+            response.writeHead(404);
+            response.write('<h1>notfound</h1>')
         }
    
         response.end();
